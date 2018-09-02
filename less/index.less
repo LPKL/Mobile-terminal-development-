@@ -1,0 +1,319 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.hidden{
+  display: none;
+}
+.w(){
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+html,body{
+  //为了下边三个部分宽高百分百起作用
+ .w();
+}
+section.loadingBox{
+  .w();
+  z-index: 50;//保证第一张图在第一张显示
+  background-color: #000;
+  transition: all 1s ;
+  header{
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 25%;
+    h1{
+      font-size: 0.5rem;
+    }
+    h2{
+      font-size: 0.5rem;
+      padding: 0.1rem;
+    }
+  }
+  .progress{
+    position: absolute;
+    top: 54%;
+    left: 10%;
+    width: 80%;
+    height: 0.4rem;
+    background-color: #fff;
+    border-radius: 0.1rem;
+    overflow: hidden;
+    .progressBar{
+      width: 0;
+      height: 100%;
+      background:linear-gradient(45deg,#6faa6d 0%,#6faa6d 25%,#77c570 25%,#77c570 50%,#6faa6d 50%,#6faa6d 75%,#77c570 75%,#77c570 100%);
+      background-size: 0.4rem 0.4rem;/*大小只在0.4rem范围变化*/
+      transition: all 1s ;
+    }
+  }
+}
+@img:'../images/';
+section.phoneBox{
+  .w();
+  z-index: 30;
+  background: url("@{img}phone-bg.jpg") no-repeat center;
+  transition: transform 0.8s;
+  header{
+    position: absolute;
+    top: 0.5rem;
+    width: 2.62rem;
+    font-size: 0.4rem;
+    color: #fff;
+    left: 50%;
+    margin-left: -1.31rem;
+    text-align: center;
+    h2{
+      letter-spacing: 0.1rem;
+    }
+    h3{
+      font-size: 0.3rem;
+      margin-top: 0.2rem;
+    }
+    h4{
+      font-size: 0.4rem;
+      margin-top: 0.1rem;
+      .hidden
+    }
+  }
+  .listenBox{
+    width: 5.2rem;
+    height: 3.6rem;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    margin-left: -2.6rem;
+    background: url("@{img}phone-listen.png") no-repeat center;
+    background-size: contain;
+    .listenBtn{
+      position: absolute;
+      width: 1.7rem;
+      height: 1.7rem;
+      top: 1.45rem;
+      left: 3.59rem;
+      border: 1px solid #4cd864;
+      border-radius: 50%;
+      animation: change 2s infinite;
+
+    }
+  }
+  .no-listenBox{
+    width: 5.2rem;
+    height: 6.6rem;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    margin-left: -2.6rem;
+    background: url("@{img}phone-key.png") no-repeat center;
+    background-size: contain;
+    transform: translateY(7rem);
+    transition: all 0.8s;
+    .no-listenBtn{
+      position: absolute;
+      width: 1.6rem;
+      height: 1.6rem;
+      bottom: 0.28rem;
+      left: 50%;
+      margin-left: -0.8rem;
+    }
+  }
+}
+section.msgBox{
+  .w();
+  z-index: 10;
+  background: #eaeaea;
+  ul{
+    position: relative;
+    top:0.2rem;
+    transition: all 0.3s;
+    li{
+      overflow: hidden;
+      transition: all 0.8s;
+      transform: translateY(1rem);
+      opacity:0;
+      div{
+        .fl;
+        max-width: 3.6rem;
+        padding: 0.25rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.26rem;
+        border-radius: 0.1rem;
+        line-height: 0.4rem;
+        background: #fff;
+        position: relative;
+        left: 1.25rem;
+        border: 2px solid #cacaca;
+        img{
+          width: 0.82rem;
+          height: 0.82rem;
+          border-radius: 50%;
+          position: absolute;
+          left: -1rem;
+          top: 0;
+        }
+        &::before{
+          content: '';
+          display: block;
+          width: 0.1rem;
+          height: 0.2rem;
+          background: url("@{img}message-arrow1.png")no-repeat center;
+          background-size: 100% 100%;
+          position: absolute;
+          top:0.2rem;
+          left: -0.1rem;
+        }
+      }
+    }
+    .right{
+      div{
+        float: right;
+        left: auto;
+        right: 1.25rem;
+        background-color: #a0e55f;
+        border: 2px solid #96b474;
+        img{
+          left: auto;
+          right: -1rem;
+        }
+        &::before{
+          content: '';
+          display: block;
+          width: 0.1rem;
+          height: 0.2rem;
+          background: url("@{img}message-arrow2.png")no-repeat center;
+          background-size: 100% 100%;
+          position: absolute;
+          top:0.2rem;
+          left: auto;
+          right: -0.1rem;
+        }
+      }
+    }
+  }
+  .keyboard{
+    width: 100%;
+    height: 5.16rem;
+    position: absolute;
+    bottom: -0.54rem;
+    background: url("@{img}message-keyboard.png") no-repeat center;
+    background-size: 100% 100%;
+    transform: translateY(3.7rem);
+    transition: transform 0.8s 0.8s;
+    .testBox{
+      position: absolute;
+      width: 4rem;
+      height: 0.4rem;
+      top: 0.35rem;
+      left: 0.9rem;
+      font-size: 0.25rem;
+    }
+    .btn{
+      width: 1.47rem;
+      height: 0.74rem;
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0.6rem;
+      background: url("@{img}message-chatBtn.png") no-repeat center;
+      background-size: 100% 100%;
+    }
+  }
+}
+@keyframes change {
+  0%{
+    transform: scale(1.1);
+  }
+  50%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

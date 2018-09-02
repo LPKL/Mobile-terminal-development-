@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        //根据设计稿去设置html的font-size属性
+        //n 640-->设计稿
+        (function (n) {
+            clientW = document.documentElement.clientWidth || document.body.clientWidth;
+            document.documentElement.style.fontSize = clientW / 640 * 100 + 'px';
+        })(640)
+    </script>
+</head>
+<body>
+<section class="loadingBox ">
+    <header>
+        <h1> Avengers</h1>
+        <h2>复联入职申请</h2>
+    </header>
+    <div class="progress">
+        <div class="progressBar"></div>
+    </div>
+</section>
+<section class="phoneBox">
+    <header>
+        <h2>斯塔克</h2>
+        <h3>form :  California</h3>
+        <h4>00:00</h4>
+    </header>
+    <div class="listenBox">
+        <div class="listenBtn">
+
+        </div>
+    </div>
+    <div class="no-listenBox">
+        <div class="no-listenBtn">
+
+        </div>
+    </div>
+
+</section>
+<section class="msgBox">
+    <ul>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                是斯塔克吗，开始面试了吗？
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                开始了，come baby。
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                面试官您好，我叫XXX，来自于北京，2018年毕业于XXX院校，学习的是XXX专业，到目前位置工作3年
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                哇塞！好牛X啊！介绍一下自己的专业技能吧！
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                本人擅长：原生JS、ES6、Promise等设计模式、组件和插件封装，看过JQ源码，可以开发各种Hybrid混合APP...
+            </div>
+        </li>
+        <li class="right btnMsg">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                我们现在使用的是VUE和REACT
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                之前的公司使用的是REACT开发，个人对于REACT渲染原理、MVC模式、SPA单页面应用、DIFF差异渲染机制以及REDUX原理等都有研究，掌握的很熟练，对于VUE之前也做过，如果公司需要可以快速入手
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                webpack会吗？
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                之前项目都是基于脚手架完成的，自己偶尔去修改一些webpack配置项，不过目前正在深入研究，可以搭建简单的脚手架
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                同时对于NODE/EXPRESS等后台开发也有所涉猎，只是没有应用到项目实战中，目前也正在研究，对这个比较感兴趣
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                你认为你的优点在于哪？和其他人对比，公司为啥要录用你！
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                肯吃苦、肯加班、能力高、要钱少...这些够吗?
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                来吧！我们需要你！
+            </div>
+        </li>
+    </ul>
+    <!--输入框-->
+    <div class="keyboard">
+        <div class="testBox"></div>
+        <div class="btn hidden"></div>
+    </div>
+</section>
+<!--audio:音频-->
+<!--video:视频-->
+<!--peload:是否加载（none：不进行加载；auto：预加载；metadata：只加载原数据）-->
+<audio src="audio/bell.mp3" preload="none" id="bell" loop></audio>
+<audio src="audio/say.mp3" preload="none" id="say"></audio>
+<audio src="audio/music.mp3" preload="none" id="bg_music" loop></audio>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
